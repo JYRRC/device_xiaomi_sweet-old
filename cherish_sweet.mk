@@ -12,11 +12,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/sweet/device.mk)
 
 # Inherit common Alphadroid  Stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 TARGET_SUPPORTS_QUICK_TAP := true
 
 # Alphadroid Stuffs
-TARGET_HAS_UDFPS := false
+TARGET_HAS_UDFPS := true
 TARGET_ENABLE_BLUR := true
 TARGET_INCLUDE_MATLOG := false
 TARGET_USE_PIXEL_LAUNCHER := false
@@ -24,14 +24,19 @@ TARGET_EXCLUDES_AUDIOFX := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Gapps
-WITH_GAPPS := true
+#WITH_GAPPS := true
+CHERISH_VANILLA := true
 TARGET_OPTOUT_GOOGLE_TELEPHONY := true
+TARGET_SUPPORTS_GOOGLE_RECORDER  := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_INCLUDE_STOCK_ARCORE := true
 
-# Blaze Maintainer
-ALPHA_MAINTAINER := franlop77
-ALPHA_BUILD_TYPE := Official
+# Maintainer Flags
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+   ro.cherish.maintainer= JYR_RC
+CHERISH_BUILD_TYPE := OFFICIAL
 
-PRODUCT_NAME := lineage_sweet
+PRODUCT_NAME := cherish_sweet
 PRODUCT_DEVICE := sweet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 10 Pro

@@ -91,6 +91,12 @@ void vendor_load_properties() {
         description = "sweet_eea-user 12 SKQ1.210908.001 V13.0.6.0.SKFEUXM release-keys";
         mod_device = "sweet_eea_global";
         property_override("ro.boot.product.hardware.sku", "sweet");
+    } else if (region == "JAPAN") {
+        model = "M2101K6R";
+        device = "sweet";
+        description = "sweet_global-user 12 SKQ1.210908.001 V13.0.16.0.SKFMIXM release-keys";
+        mod_device = "sweet_global";
+        property_override("ro.boot.product.hardware.sku", "sweet");
     } else if (region == "INDIA") {
         if (sku == "std") {
             model = "M2101K6P";
