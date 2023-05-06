@@ -24,11 +24,12 @@ TARGET_EXCLUDES_AUDIOFX := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Gapps
-WITH_GAPPS := true
+#WITH_GAPPS := true
+WITH_GAPPS := false
 TARGET_OPTOUT_GOOGLE_TELEPHONY := true
 
-# Blaze Maintainer
-ALPHA_MAINTAINER := franlop77
+# Alpha Maintainer
+ALPHA_MAINTAINER := JYR_RC
 ALPHA_BUILD_TYPE := Official
 
 PRODUCT_NAME := lineage_sweet
